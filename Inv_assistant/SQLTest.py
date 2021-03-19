@@ -42,8 +42,12 @@ def SQLite_DB_actions():
         insert_sql = ''' INSERT INTO projects
         (name, begin_date, end_date)
         VALUES(?,?,?)'''
+        delete_sql = '''delete from projects where id = 1
+        '''
         values = ('stan','2020-10-10','2021-1-28')
-        print(run_insert(conn, insert_sql,values))
+        # print(run_DML3(conn, insert_sql,values))
+        print(run_DML2(conn, delete_sql))
+
 
 if __name__ == '__main__':
     SQLite_DB_actions()
