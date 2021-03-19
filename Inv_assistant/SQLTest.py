@@ -1,7 +1,8 @@
 from  SQLite_Tool import *
+from Para import *
 
 def SQLite_DB_actions():
-    DBFileName = r'C:\Stan\Stan_Workspace\My_Projects\Testing\SQLiteTest\SQLiteTest.db'
+    
 
     sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
                                         id integer PRIMARY KEY,
