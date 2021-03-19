@@ -54,9 +54,14 @@ def run_query(conn,sql):
     for row in rows:
         print(row)
 
-def run_insert(conn, insertQuery, values):
+def run_DML3(conn, insertQuery, values):
     cur = conn.cursor()
     cur.execute(insertQuery,values)
+    conn.commit()
+    return cur.lastrowid
+def run_DML2(conn, str_sql):
+    cur = conn.cursor()
+    cur.execute(str_sql)
     conn.commit()
     return cur.lastrowid
 
